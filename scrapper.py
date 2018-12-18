@@ -39,8 +39,8 @@ class QbScrapper:
                 """
                 if position == 'QB' and attempts > 100:
                     rookie_QBs.append(cols[1].find(name='a').text)
-                print(rookie_QBs)
+                    print("Name: ", cols[1].find(name='a').text, "Count: ", (len(rookie_QBs)))
             sleep(self.timeout)
-        print("The function has finished running")
+        print("The function has finished running!!!")
         return rookie_QBs
 

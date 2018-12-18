@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rookie QB Data Table</title>
+</head>
+<table border=1>
+    <tr>
+        <th>index</th>
+        <th>Name</th>
+    </tr>
+{% for qb in data %}
+    <tr>
+        <th> {{loop.index}} </th>
+        <td> {{ qb }} </td>
+   </tr>
+{% endfor %}
+</table>
+</html>

@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
@@ -18,7 +18,7 @@ def get_rookie_data(position):
     if position == 'qb':
         seasons = range(2014, 1979, -1)
         scrapper = QbScrapper(seasons)
-        return scrapper.getMyRookies()
+        return render_template('rookie-qb-tbl.html', data=scrapper.getMyRookies())
 
 
 if __name__ == '__main__':
