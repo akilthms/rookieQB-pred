@@ -1,0 +1,5 @@
+docker run --name rookieQB-pred-db \
+    -p 5432:5432 \
+    -e POSTGRES_DB=rookieQB-pred \
+    -e POSTGRES_PASSWORD=rookieQB-pred \
+    -d postgres

@@ -1,1 +1,0 @@
-# rookieQB-pred
