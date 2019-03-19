@@ -13,8 +13,8 @@ class QbScrapper:
         self.site_name = site_name
         self.timeout = timeout
 
-    def getMyRookies(self):
-        rookie_QBs = []
+    def get_my_rookies(self):
+        rookie_qbs = []
         for season in self.seasons:
             url = 'http://www.nfl.com/stats/categorystats?' \
                   'archive=false&' \
@@ -38,9 +38,9 @@ class QbScrapper:
                 data-set of rookies that played for the majority of the season.
                 """
                 if position == 'QB' and attempts > 100:
-                    rookie_QBs.append(cols[1].find(name='a').text)
+                    rookie_qbs.append(cols[1].find(name='a').text)
                     print("Name: ", cols[1].find(name='a').text, "Count: ", (len(rookie_QBs)))
             sleep(self.timeout)
         print("The function has finished running!!!")
-        return rookie_QBs
+        return rookie_qbs
 

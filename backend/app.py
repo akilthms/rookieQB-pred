@@ -15,7 +15,7 @@ def get_rookie_data(position):
     if position == 'qb':
         seasons = range(2014, 1979, -1)
         scrapper = QbScrapper(seasons)
-        return render_template('rookie-qb-tbl.html', data=scrapper.getMyRookies())
+        return render_template('rookie-qb-tbl.html', data=scrapper.get_my_rookies())
 
 
 if __name__ == '__main__':
