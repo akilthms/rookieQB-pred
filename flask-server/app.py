@@ -18,5 +18,8 @@ def get_rookie_data(position):
         return render_template('rookie-qb-tbl.html', data=scrapper.get_my_rookies())
 
 
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

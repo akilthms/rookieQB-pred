@@ -1,5 +1,5 @@
-from backend.entities.entity import Session, engine, Base
-from backend.entities.rookieQbs import RookieQbs
+from flaskr.entities.entity import Session, engine, Base
+from flaskr.entities.rookieQbs import RookieQbs
 
 # generate database schema
 Base.metadata.create_all(engine)
